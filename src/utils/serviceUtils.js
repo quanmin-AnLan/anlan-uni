@@ -5,7 +5,7 @@ const headers = { 'Content-Type': 'application/x-www-form-urlencoded' }
 
 const instance = axios.create({
   timeout: 15000,
-  baseURL: 'http://api.anlan.xyz',
+  baseURL: 'https://api.anlan.xyz',
   headers,
   adapter: UniAdapter, // 指定适配器
 })
