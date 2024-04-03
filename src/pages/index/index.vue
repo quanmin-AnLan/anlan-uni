@@ -1,10 +1,12 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
+    <image class="logo" src="http://img.anlan.xyz/game/qmdld.png"></image>
     <view class="text-area">
-      <text class="title" @click="push()">{{ title }}</text>
+      <button class="title" @click="push()">{{ title }}</button>
     </view>
-    <uni-card>123123123</uni-card>
+    <uni-card title="有建议及反馈可联系开发者">
+      <view>2016751527/MissAnlan_Queen</view>
+    </uni-card>
   </view>
 </template>
 
@@ -12,7 +14,7 @@
 export default {
   data() {
     return {
-      title: 'Hello',
+      title: '点击前往替身',
     }
   },
   onLoad() {},

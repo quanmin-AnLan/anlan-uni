@@ -1,9 +1,7 @@
 import axios from 'axios'
 import { UniAdapter } from "uniapp-axios-adapter";
 import qs from 'qs'
-const headers = {
-  'Content-Type': 'application/x-www-form-urlencoded'
-}
+const headers = { 'Content-Type': 'application/x-www-form-urlencoded' }
 
 const instance = axios.create({
   timeout: 15000,
@@ -36,10 +34,8 @@ instance.interceptors.response.use(
   }
 )
 class Http {
-  static get(url, params) {
-    return instance.get(url, {
-      params
-    })
+  static get (url, params) {
+    return instance.get(url, { params })
   }
 
   /**
@@ -47,18 +43,12 @@ class Http {
    *params 请求参数
    *contentType 请求内容类型 urlencoded/json
    */
-  static post(url, params, headers = {
-    'Content-type': 'application/x-www-form-urlencoded'
-  }) {
+  static post (url, params, headers = { 'Content-type': 'application/x-www-form-urlencoded' }) {
     if (headers.contentType === 'urlencoded') {
-      return instance.post(url, qs.stringify(params), {
-        headers
-      })
+      return instance.post(url, qs.stringify(params), { headers })
     } else {
       return instance.post(url, params, {
-        headers: Object.assign({
-          'Content-Type': 'application/json'
-        }, headers)
+        headers: Object.assign({ 'Content-Type': 'application/json' }, headers)
       })
     }
   }
