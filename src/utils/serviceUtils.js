@@ -26,6 +26,8 @@ instance.interceptors.request.use(
 
 instance.interceptors.response.use(
   response => {
+    console.log(response.config && response.config.url)
+    console.log(response.data)
     return response.data
   },
   error => {

@@ -76,6 +76,7 @@ export default {
     }
   },
   onLoad () {
+    console.log('onload')
     this.init()
   },
   onShareAppMessage () {
