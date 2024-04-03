@@ -75,8 +75,22 @@ export default {
       return data
     }
   },
-  created () {
+  onLoad () {
     this.init()
+  },
+  onShareAppMessage () {
+    return {
+      title: 'Anlan工具箱',
+      path: 'pages/index/index',
+      imageUrl: 'http://img.anlan.xyz/anlan.jpg'
+    }
+  },
+  onShareTimeline () {
+    return {
+      title: 'Anlan工具箱',
+      path: 'pages/index/index',
+      imageUrl: 'http://img.anlan.xyz/anlan.jpg'
+    }
   },
   methods: {
     init () {

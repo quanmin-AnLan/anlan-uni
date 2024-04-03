@@ -18,6 +18,20 @@ export default {
     }
   },
   onLoad() {},
+  onShareAppMessage () {
+    return {
+      title: 'Anlan工具箱',
+      path: 'pages/index/index',
+      imageUrl: 'http://img.anlan.xyz/anlan.jpg'
+    }
+  },
+  onShareTimeline () {
+    return {
+      title: 'Anlan工具箱',
+      path: 'pages/index/index',
+      imageUrl: 'http://img.anlan.xyz/anlan.jpg'
+    }
+  },
   methods: {
     push () {
       this.$Router.push('/pages/skin/index')
