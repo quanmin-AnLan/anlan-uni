@@ -17,6 +17,12 @@
       "style": {
         "navigationBarTitleText": "替身"
       }
+    },
+    {
+      "path": "pages/upgrade/index",
+      "style": {
+        "navigationBarTitleText": "强化"
+      }
     }
   ],
   "globalStyle": {

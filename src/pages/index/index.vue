@@ -1,8 +1,9 @@
 <template>
   <view class="content">
-    <image class="logo" src="http://img.anlan.xyz/game/qmdld.png"></image>
-    <view class="text-area">
-      <button class="title" @click="push()">{{ title }}</button>
+    <image class="logo" src="http://img.anlan.xyz/anlan/dark-logo.png"></image>
+    <view class="button-area">
+      <al-button text="替身升星" @click="push('skin')"></al-button>
+      <al-button text="模拟强化" @click="push('upgrade')"></al-button>
     </view>
     <uni-card title="有建议及反馈可联系开发者">
       <view>2016751527/MissAnlan_Queen</view>
@@ -11,11 +12,10 @@
 </template>
 
 <script>
+import AlButton from '@/components/AlButton/index.vue'
 export default {
   data() {
-    return {
-      title: '点击前往替身',
-    }
+    return {}
   },
   onLoad() {},
   onShareAppMessage () {
@@ -33,10 +33,13 @@ export default {
     }
   },
   methods: {
-    push () {
-      this.$Router.push('/pages/skin/index')
+    push (route) {
+      this.$Router.replace(`/pages/${route}/index`)
     }
   },
+  components: {
+    AlButton
+  }
 }
 </script>
 
@@ -45,25 +48,25 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  height: 100%;
+  background: linear-gradient(to bottom, #000000, #434343);
 }
 
 .logo {
   height: 200rpx;
   width: 200rpx;
-  margin-top: 200rpx;
+  margin-top: 120rpx;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50rpx;
+  margin-bottom: 60rpx;
 }
 
-.text-area {
+.button-area {
   display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: red;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 420rpx;
+  margin-bottom: 60rpx;
 }
 </style>
